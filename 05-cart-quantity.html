@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+    <style>
+      .button{
+        padding:3px 5px;
+        border-radius:3px;
+        margin-left:4px;
+        transition-duration: 0.5s;
+        border:1px solid grey
+      }
+
+      .button:hover{
+        padding: 5px 8px;
+        border-radius:4px;
+        font-size:15px
+      }
+    </style>
+  </head>
+  <body style="font-family:Arial">
+      
+    <h3>Cart Quantity</h3>
+
+    <button class="button" onclick="console.log(cart)">
+      Show Quantity
+    </button>
+
+    <button class="button" onclick="cart = cart + 1">
+      Add To Cart
+    </button>
+
+    <button class="button" onclick="cart+=2">
+       +2 
+      </button>
+
+    <button class="button" onclick="cart+=3">
+       +3 
+      </button>
+
+    <button class="button" onclick="cart = 0">
+      Reset Cart
+    </button>
+
+    <script>
+      let cart = 0;
+    </script>
+
+  </body>
+</html>
