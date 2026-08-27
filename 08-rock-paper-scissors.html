@@ -7,7 +7,7 @@
       font-family:Arial
     }
 
-    .rock, .paper, .scissors {
+    .rock, .paper, .scissors, .reset {
       /*height:130px;
       width:130px;
       border-radius:65px;*/
@@ -37,7 +37,7 @@
       playGame('scissors');
     ">scissors</button>
 
-    <button onclick ="
+    <button class="reset" onclick ="
       score.wins = 0;
       score.losses = 0;
       score.ties = 0;
@@ -45,11 +45,7 @@
  
     <script>
       let result = '';
-      const score = {
-        wins: 0,
-        losses: 0,
-        ties: 0
-      }
+      let score = JSON.parse(localStorage.getItem('score'));
 
       function pickComputerMove() {
         let computerMove = '';
@@ -109,6 +105,8 @@
         } else if (result === 'Tie') {
           score.ties ++ ;
         }
+
+        localStorage.setItem('score',JSON.stringify(score));
 
         alert(`You picked ${playerMove}. Computer picked ${computerMove}, ${result}.\n` +
               `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
