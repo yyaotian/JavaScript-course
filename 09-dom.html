@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+
+    <button>Hello</button>
+    <script>
+      console.log(document.title);
+      document.title = 'changed';
+
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+
+      document.body.innerHTML = '<button>changed</button>'
+
+      /*
+      document.body.innerHTML = "hello";
+      document.title = 'Good Boy';
+      */
+    </script>
+  </body>
+</html>
