@@ -6,7 +6,16 @@
   <body>
 
     <button>Hello</button>
+    <button class="second-button">second button</button>
+
     <script>
+      console.log(document.querySelector('button').innerHTML);
+      document.querySelector('button').innerHTML = 'changed';
+
+      const buttonElement = document.querySelector('.second-button').innerHTML = 'changed too';
+      console.log(buttonElement)
+    
+      /*
       console.log(document.title);
       document.title = 'changed';
 
@@ -16,6 +25,7 @@
       console.log(document.body.innerHTML);
 
       document.body.innerHTML = '<button>changed</button>'
+      */
 
       /*
       document.body.innerHTML = "hello";
