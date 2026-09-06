@@ -7,25 +7,28 @@
         margin-top:50px;
       }
 
-      .subscribe-button {
-        padding:3px 7px;
-        background-color: #e7e6e6;
-        border-radius:3px;
-        border: 1px solid grey;
+      p {
+        font-family:Arial;
       }
+
+      .subscribe-button {
+        padding:9px 17px;
+        background-color: #111111;
+        color:white;
+        font-family:Arial;
+        font-style:bold;
+        border-radius:20px;
+        border: 1px solid grey;
+        cursor:pointer;
+      }
+      
     </style>
   </head>
   <body>
     <p>Youtube Subscribe Button</p>
     <button onclick = "
-    let subscribeButton = document.querySelector('.subscribe-button');
-
-    if (subscribeButton.innerHTML === 'Subscribe') {
-      subscribeButton.innerHTML = 'Subscribed'
-    } else {
-      subscribeButton.innerHTML = 'Subscribe'
-    }
-    " class="subscribe-button">Subscribe</button>
+      subscribe();
+    " class="subscribe-button"> Subscribe</button>
 
     <p class="title">Amazon  Shipping Calculator</p>
     <p>Orders under &#36;40 = +&#36;10 shipping</p>
@@ -37,6 +40,15 @@
     <a href="google.com">Click here</a>
 
     <script>
+      function subscribe() {
+        const subscribeButton = document.querySelector('.subscribe-button');
+
+        if (subscribeButton.innerText === 'Subscribe') {
+          subscribeButton.innerHTML = 'Subscribed'
+        } else {
+          subscribeButton.innerHTML = 'Subscribe'
+        }
+      }
     </script>
   </body>
 </html>
